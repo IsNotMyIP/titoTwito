@@ -1,0 +1,30 @@
+{
+    "copiers": [
+        {
+            "name": "ifilosofia",
+            "id": "115516167"
+        },
+        {
+            "name": "EresKurioso",
+            "id": "1216328455"
+        },
+        {
+            "name": "microcuentos",
+            "id": "56006912"
+        },
+        {
+            "name": "SonMicroCuentos",
+            "id": "2312527981"
+        },
+        {
+            "name": "veroshits",
+            "id": "718485116"
+        }
+    ],
+    "Time": [
+        {
+            "LastTweet": 0,
+            "LastRT": 0
+        }
+    ]
+}

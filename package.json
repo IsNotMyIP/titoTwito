@@ -1,0 +1,23 @@
+{
+  "name": "titoTwito",
+  "description": "A bot for earn followers as a hell",
+  "version": "1.0.0",
+  "author": "Sean Harcastle SirSeanHD@gmail.com",
+  "keywords": [
+    "twitter",
+    "api",
+    "rest",
+    "stream",
+    "streaming",
+    "bot",
+    "usefull",
+    "follow"
+  ],
+  "dependencies": {
+    "twit": "git://github.com/ttezel/twit",
+    "colors": "0.6.x"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  }
+}
