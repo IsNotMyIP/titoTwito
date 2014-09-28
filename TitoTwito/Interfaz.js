@@ -1,7 +1,7 @@
-var S = require ('.requires/Stream');
-var Say = require ('.requires/Say');
-var Add = require ('.requires/Add');
-var Show = require ('.requires/Show');
+var S = require ('./requires/Stream.js');
+var Say = require ('./requires/Say');
+var Add = require ('./requires/Add');
+var Show = require ('./requires/Show');
 var colors = require('colors');
 process.stdin.resume()
 process.stdin.on('data', function(d){
