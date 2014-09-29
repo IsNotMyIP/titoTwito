@@ -10,7 +10,7 @@ var refresh = function(){
 	return data;
 }
 var escribe = function(datos){
-	fs.writeFile("BBDD.json", datos, function(err){
+	fs.writeFile("./BBDD.json", datos, function(err){
 		if (err){
 			console.log(err);
 		}

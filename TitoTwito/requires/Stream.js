@@ -3,7 +3,6 @@ var refresh = require('./Refresh');
 var time = require('./Time')
 
 var Copiers = refresh.refresh();
-var shit = {"follow" : ["115516167", "2215546130", "718485116", "2785638816" ]};
 console.log(Copiers);
 var lastTweet;
 stream = config.T.stream('statuses/filter', (Copiers) );

@@ -1,4 +1,4 @@
-var S = require ('./requires/Stream.js');
+var S = require ('./requires/Stream');
 var Say = require ('./requires/Say');
 var Add = require ('./requires/Add');
 var Show = require ('./requires/Show');

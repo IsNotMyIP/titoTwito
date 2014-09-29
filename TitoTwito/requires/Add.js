@@ -13,7 +13,7 @@ var writeInfo = function(name,id){
 	// id = id.slice(0,id.length-1);
 	// var abierto = (string.slice(0, (string.length -3)) + ",\n\t{\n\t\t\"name\": " + '"'+ name +'"'+ ",\n\t\t\"id\": " + '"'+  id + '"' + '\n\t}\n]\n');
 	console.log(json);
-	fs.writeFile("./BBDD.json", JSON.stringify(json, null, 4) , function(err){
+	fs.writeFile("./requires/BBDD.json", JSON.stringify(json, null, 4) , function(err){
 		if (err){
 			console.log(err);
 		}
@@ -24,9 +24,9 @@ var writeInfo = function(name,id){
 }
 
 var newCopier = function(name, id){
-	fs.exists ("./BBDD.json", function(exists){
+	fs.exists ("./requires/BBDD.json", function(exists){
 		if (exists){
-			fs.readFile("./BBDD.json", 'utf8', function(err, data){
+			fs.readFile("./requires/BBDD.json", 'utf8', function(err, data){
 				if (err){
 					console.log("Error al readFile: ");
 					console.log(err);
