@@ -1,7 +1,6 @@
 var config = require('./Config');
 var refresh = require('./Refresh');
 var time = require('./Time')
-
 var Copiers = refresh.refresh();
 console.log(Copiers);
 var lastTweet;
@@ -36,7 +35,7 @@ stream.on('tweet', function (tweet) {
         })
         setTimeout(function(){
           console.log(idTweet);
-          if (time.difTime(2, 1)){
+          if (time.difTime(80, 1)){
             config.Y.post('statuses/retweet/:id' , {id: idTweet}, function (err, data, response) {
               if (err){
                 console.log("No se puede: " + err);
