@@ -5,10 +5,6 @@
             "id": "115516167"
         },
         {
-            "name": "EresKurioso",
-            "id": "1216328455"
-        },
-        {
             "name": "microcuentos",
             "id": "56006912"
         },
@@ -25,14 +21,22 @@
             "id": "2215546130"
         },
         {
-            "name": "jaja",
-            "id": "12"
+            "name": "DeboConfesarQue",
+            "id": "191949347"
+        },
+        {
+            "name": "phrasesMusicEs",
+            "id": "485259990"
+        },
+        {
+            "name": "GranReflexion",
+            "id": "51581070"
         }
     ],
     "Time": [
         {
-            "LastTweet": 1412004969363,
-            "LastRT": 1412004890425
+            "LastTweet": 1412175913328,
+            "LastRT": 1412173287409
         }
     ]
 }
