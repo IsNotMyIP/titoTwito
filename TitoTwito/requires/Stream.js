@@ -2,7 +2,6 @@ var config = require('./Config');
 var refresh = require('./Refresh');
 var time = require('./Time')
 var Copiers = refresh.refresh();
-console.log(Copiers);
 var lastTweet;
 stream = config.T.stream('statuses/filter', (Copiers) );
 stream.on('tweet', function (tweet) {
@@ -17,6 +16,8 @@ stream.on('tweet', function (tweet) {
     }
     else{
       if (time.difTime(40, 0)){
+        time.timeLog();
+        console.log("Nuevo tweet".bold.blue)
         console.log("\nUserName: ".magenta + tweet.user.name.white);
         console.log("Tweet: ".magenta + tweet.text.white);
         lastTweet = tweet.text;

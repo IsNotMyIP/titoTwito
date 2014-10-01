@@ -1,14 +1,18 @@
 var fs = require("fs");
+var colors = require("colors")
+var timeLog = function(){
+    var log = new Date();
+    process.stdout.write(("[" + log.getHours() + ":" + log.getMinutes() + "]").blue.bold);
+}
+
 var difTime = function(min, type){
     var json = require("./BBDD");
-    between = (min * 60 * 1000);
+    var between = (min * 60 * 1000);
     if( type == 0){
         var ms_lastEvent = parseInt(json.Time[0].LastTweet)
-        console.log("2");
     }
     else if (type == 1){
         var ms_lastEvent = parseInt(json.Time[0].LastRT)
-        console.log("1");
     }
     //console.log(typeof(parseInt(json.Time[0].LastTweet)));
     var lastEvent = new Date(ms_lastEvent);
@@ -19,7 +23,6 @@ var difTime = function(min, type){
             json.Time[0].LastTweet = dateNow.getTime();
             console.log(dateNow.getHours());
             console.log(dateNow.getMinutes());
-            console.log("Typooo 1")
         }
         else if (type == 1){
             console.log(1)
@@ -36,8 +39,10 @@ var difTime = function(min, type){
     return true;
     }
     else{
-        console.log("No han pasado " + min + " minuto");
+        var tempo = (min*60*1000 - (dateNow.getTime() - lastEvent.getTime())) / 1000*60
+        console.log("No han pasado " + tempo + " minuto");
     return false;
     }
 }
+exports.timeLog = timeLog;
 exports.difTime = difTime;
