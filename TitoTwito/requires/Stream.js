@@ -49,7 +49,7 @@ stream.on('tweet', function (tweet) {
         }, 4000);
       }
       else{
-        console.log("ESPERA");
+        //Debe de verse el mensaje de error de la funcion diftTIme en Time.js
       }
     }
   }

@@ -21,11 +21,8 @@ var difTime = function(min, type){
         //Aqui debes escribir la nueva fecha en el bbdd.json, y donde en funcion del type.
         if (type == 0){
             json.Time[0].LastTweet = dateNow.getTime();
-            console.log(dateNow.getHours());
-            console.log(dateNow.getMinutes());
         }
         else if (type == 1){
-            console.log(1)
             json.Time[0].LastRT = dateNow.getTime();
         }
         fs.writeFile("./requires/BBDD.json", JSON.stringify(json, null, 4), function(err){
@@ -39,8 +36,9 @@ var difTime = function(min, type){
     return true;
     }
     else{
-        var tempo = (min*60*1000 - (dateNow.getTime() - lastEvent.getTime())) / 1000*60
-        console.log("No han pasado " + tempo + " minuto");
+        timeLog();
+        var tempo = min - ((dateNow.getTime() / 60000) - (lastEvent.getTime() / 60000));
+        console.log(("Quedan " + parseInt(tempo) + " minutos para llegar a " + min).red);
     return false;
     }
 }
