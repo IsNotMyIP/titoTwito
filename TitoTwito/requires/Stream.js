@@ -18,8 +18,8 @@ stream.on('tweet', function (tweet) {
       if (time.difTime(40, 0)){
         time.timeLog();
         console.log("Nuevo tweet".bold.blue)
-        console.log("\nUserName: ".magenta + tweet.user.name.white);
-        console.log("Tweet: ".magenta + tweet.text.white);
+        console.log("\nUserName: ".magenta.bold + tweet.user.name.white);
+        console.log("Tweet: ".magenta.bold + tweet.text.white);
         lastTweet = tweet.text;
 
         //Lets copy tweet text and tweet it in our account

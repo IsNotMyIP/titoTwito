@@ -3,6 +3,7 @@ var Say = require ('./requires/Say');
 var Add = require ('./requires/Add');
 var Show = require ('./requires/Show');
 var Time = require('./requires/Time');
+var Earn = require('./requires/Earn')
 var colors = require('colors');
 process.stdin.resume()
 process.stdin.on('data', function(d){
@@ -43,12 +44,22 @@ process.stdin.on('data', function(d){
         Time.timeLog();
         Say.probando(d.toString().slice(6));
       }
-      else if(d.toString().slice(0,3) == "add"){
+      else if(d.toString().slice(0,3).toLowerCase() == "add"){
         var input = d.toString().slice(4);
         var name = input.substr(0,input.indexOf(' '));
         var id = input.substr(input.indexOf(' ')+1);
         Time.timeLog();
         Add.newCopier(name, id);
+      }
+      else if(d.toString().slice(0,6).toLowerCase() == "follow"){
+        Time.timeLog();
+        var input = d.toString().slice(7);
+        Earn.randFollow(input);
+      }
+      else if(d.toString().slice(0,5).toLowerCase() == "clean") {
+        Time.timeLog();
+        var input = d.toString().slice(6);
+        Earn.unfollows(input);
       }
       else{
         Time.timeLog();
