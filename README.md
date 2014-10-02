@@ -10,7 +10,7 @@ For coding it I have used [twit](https://github.com/ttezel/twit) library, which 
 npm install 
 ```
 
-Set your tokens on **requires/Config.js**:
+Set your tokens on **requires/Config.js** where **T** is the bot for earning followers and **Y** is the account which is going to RT your bot's tweets.
 
 ```javascript
 var Twit = require("../../node_modules/twit/lib/twitter")
