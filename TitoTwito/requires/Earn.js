@@ -40,6 +40,7 @@ var randFollow = function(x){
 }
 
 var unfollows = function(x){
+    var total = 0;
 	config.T.get('followers/ids', function(err, data, response) {
 		if (err || data.ids == 'undefined'){
 			console.log("error" + err);
@@ -52,13 +53,12 @@ var unfollows = function(x){
       			}
       			else{
         			var friends = data.ids
-        			var total = 0;
           			for (var i=0; i<x; i++){
             			var target = randIndex(friends);
             			if(!~followers.indexOf(target)) {
               				config.T.post('friendships/destroy', { id: target }, function(err, data, response){
               					if(!err){
-              						total++;
+              						total= total +1;
              					}
               				});   
             			}

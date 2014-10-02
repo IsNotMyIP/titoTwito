@@ -25,7 +25,7 @@ var difTime = function(min, type){
         else if (type == 1){
             json.Time[0].LastRT = dateNow.getTime();
         }
-        fs.writeFile("./requires/BBDD.json", JSON.stringify(json, null, 4), function(err){
+        fs.writeFile("../requires/BBDD.json", JSON.stringify(json, null, 4), function(err){
             if(!err){
                 console.log()
             }

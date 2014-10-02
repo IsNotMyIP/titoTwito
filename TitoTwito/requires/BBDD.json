@@ -1,42 +1,11 @@
 {
     "copiers": [
-        {
-            "name": "ifilosofia",
-            "id": "115516167"
-        },
-        {
-            "name": "microcuentos",
-            "id": "56006912"
-        },
-        {
-            "name": "SonMicroCuentos",
-            "id": "2312527981"
-        },
-        {
-            "name": "veroshits",
-            "id": "718485116"
-        },
-        {
-            "name": "isnotmyip",
-            "id": "2215546130"
-        },
-        {
-            "name": "DeboConfesarQue",
-            "id": "191949347"
-        },
-        {
-            "name": "phrasesMusicEs",
-            "id": "485259990"
-        },
-        {
-            "name": "GranReflexion",
-            "id": "51581070"
-        }
+       
     ],
     "Time": [
         {
-            "LastTweet": 1412175913328,
-            "LastRT": 1412173287409
+            "LastTweet": 0,
+            "LastRT": 0
         }
     ]
 }
