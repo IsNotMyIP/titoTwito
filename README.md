@@ -13,8 +13,9 @@ npm install
 Set your tokens on **requires/Config.js** where **T** is the bot for earning followers and **Y** is the account which is going to RT your bot's tweets.
 
 ```javascript
-var Twit = require("../../node_modules/twit/lib/twitter")
+var Twit = require("../../node_modules/twit/lib/twitter")]
 
+//Accrount of your bot
 var T = new Twit({
     consumer_key:         'x'
   , consumer_secret:      'x'
@@ -22,6 +23,7 @@ var T = new Twit({
   , access_token_secret:  'x'
 })
 
+// Account that is going to RT your bot's tweets.
 var Y = new Twit({
     consumer_key:         'x'
   , consumer_secret:      'x'
