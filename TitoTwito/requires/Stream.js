@@ -3,15 +3,16 @@ var refresh = require('./Refresh');
 var time = require('./Time')
 var Copiers = refresh.refresh();
 var lastTweet;
+
 stream = config.T.stream('statuses/filter', (Copiers) );
 stream.on('tweet', function (tweet) {
   //It checks if tweet it is not a RT, or mention.
-  if (typeof(tweet.retweeted_status) != 'undefined' || tweet.in_reply_to_status_id != null || tweet.in_reply_to_user_id != null){
+  if (typeof(tweet.retweeted_status) != 'undefined' || tweet.in_reply_to_status_id != null || tweet.in_reply_to_user_id != null || tweet.text.indexOf("@") != -1){
       //console.log("Im not gonna RT it cus' its not what im looking for.".red);
       //  console.log("_________________________________________________\n".bold)
   }
   else {
-    if (tweet.text == lastTweet){
+    if (tweet.text == lastTweet ){
       console.log("Double Tweet".red + lastTweet);
     }
     else{

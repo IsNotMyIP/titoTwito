@@ -3,7 +3,8 @@ var Say = require ('./requires/Say');
 var Add = require ('./requires/Add');
 var Show = require ('./requires/Show');
 var Time = require('./requires/Time');
-var Earn = require('./requires/Earn')
+var Earn = require('./requires/Earn');
+var Intervals = require('./requires/Intervals.js')
 var colors = require('colors');
 process.stdin.resume()
 process.stdin.on('data', function(d){
@@ -27,6 +28,12 @@ process.stdin.on('data', function(d){
     case "show\n":
       Time.timeLog();
       Show.readme();
+      break;
+    case "startharv\n":
+      Intervals.harvest();
+      break;
+    case "stopharv\n":
+      Intervals.stopHarvesting();
       break;
     case "help\n":
       Time.timeLog();

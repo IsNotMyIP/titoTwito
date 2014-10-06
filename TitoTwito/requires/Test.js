@@ -1,14 +1,25 @@
-    var json = require('./BBDD.json');
-    var data = {"follow" : []};
-    var x = json.copiers.length;
-    for (i=0; i<x; i++){
-        data.follow.push(json.copiers[i].id);
+    setInterval(function(){
+        console.log("adios");
+    },2)
+    for(var i=0;i<10000; i++){
+        console.log("Hola!");
     }
-    console.log(data)
 
 
 
 
+
+
+
+
+
+    // var json = require('./BBDD.json');
+    // var data = {"follow" : []};
+    // var x = json.copiers.length;
+    // for (i=0; i<x; i++){
+    //     data.follow.push(json.copiers[i].id);
+    // }
+    // console.log(data)
 
 
     // var json = require("./BBDD.json");
